@@ -96,7 +96,7 @@ var unifiedServer = function (req, res) {
 
             // Return the response
             res.setHeader('Content-Type', 'application/json')
-            res.writeHead(statusCode)
+            // res.writeHead(statusCode)
             res.end(payloadString)
             // Log the request path
             console.log('Returning this response: ', statusCode, payload)
@@ -108,5 +108,6 @@ var unifiedServer = function (req, res) {
 // Define a request router
 var router = {
     'ping': handlers.ping,
-    'users' : handlers.users
+    'users' : handlers.users,
+    'tokens' : handlers.tokens 
 }
